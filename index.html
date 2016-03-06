@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FundamentalPart2 </title>
+</head>
+<script>
+    function personConstructor(arg){
+    var name = String(arg);
+    var person = {
+        key:name, 
+        distance_travelled: 0,
+        say_name: function (){
+            alert(name);
+        },
+        say_someting: function(arg){
+            if(arg == "I am cool"){
+                alert("Jay is cool");
+            }
+            else{
+                alert("For suer dude ");
+            }
+        },
+        walk: function(){
+            distance_travelled += 3; 
+            alert("You are walking");
+        },
+        run: function(){
+            distance_travelled += 10; 
+            alert("You are running");
+        },
+        crawl: function(){
+            distance_travelled += 1;
+            alert("you are crawling");
+        
+        }
+    
+    };
+    return person; 
+}
+var a = personConstructor("Antonis");
+a.say_name();
+
+function ninjaConstructor(){
+    var arr= ["yellow-belt", "green-belt", "purple belt", 'blackbel'];
+    var ninja ={
+        name: "Da Ninja",
+        cohort: "2",
+        beltLevel:arr[0],
+        levelup: function(){
+            beltLevel = arr[index+1];
+        }
+    };
+    return ninja;
+}
+var b = new ninjaConstructor;
+console.log(b.name);
+
+    
+</script>
+<body>
+    
+</body>
+</html>
+
+
